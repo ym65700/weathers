@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/main_title" />
+
+    <LinearLayout
+        android:id="@+id/weather_info_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title"
+        android:background="@drawable/s"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/main_content" />
+
+        <ImageView
+            android:id="@+id/divider"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/base_list_divider_drawable"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider"
+            android:orientation="horizontal"
+            
+            android:paddingTop="30.0dip" >
+
+            <include
+                android:id="@+id/subitem1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:layout_weight="1.0"
+                layout="@layout/biz_plugin_weather_subitem" />
+
+            <include
+                android:id="@+id/subitem2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:layout_weight="1.0"
+                layout="@layout/biz_plugin_weather_subitem" />
+
+            <include
+                android:id="@+id/subitem3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2.0dip"
+                android:layout_weight="1.0"
+                layout="@layout/biz_plugin_weather_subitem" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

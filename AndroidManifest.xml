@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.weathers"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.example.weathers" >
+    </instrumentation>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/tubiao"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Welcome"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".GuideActivity" >
+        </activity>
+        <activity android:name=".MainActivity" >
+        </activity>
+
+        <uses-library android:name="android.test.runner" />
+
+        <activity android:name="SelectArea" >
+        </activity>
+        <activity android:name="Weather" >
+        </activity>
+
+        <service android:name="com.example.service.AutoUpdateService" >
+        </service>
+
+        <receiver android:name="com.example.receiver.AutoReceiver" >
+        </receiver>
+    </application>
+
+</manifest>
